@@ -27,13 +27,18 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+    public function isAuthorOf($model)
+    {
+        return $this->id == $model->user_id;
+    }
+
     public function topics()
     {
         return $this->hasMany(Topic::class);
     }
 
-    public function isAuthorOf($model)
+    public function replies()
     {
-        return $this->id == $model->user_id;
+        return $this->hasMany(Reply::class);
     }
 }
