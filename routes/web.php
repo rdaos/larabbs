@@ -31,3 +31,5 @@ Route::post('upload_image', 'TopicsController@uploadImage')->name('topics.upload
 
 Route::get('topics/{topic}/{slug?}', 'TopicsController@show')->name('topics.show');
 
+Route::get('permission-denied', 'PagesController@permissionDenied')->name('permission-denied');
+
