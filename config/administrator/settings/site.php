@@ -22,11 +22,6 @@ return [
             // 字数限制
             'limit' => 50,
         ],
-        'contact_email' => [
-            'title' => '联系人邮箱',
-            'type' => 'text',
-            'limit' => 50,
-        ],
         'seo_description' => [
             'title' => 'SEO - Description',
             'type' => 'textarea',
@@ -36,6 +31,31 @@ return [
             'title' => 'SEO - Keywords',
             'type' => 'textarea',
             'limit' => 250,
+        ],
+        'site_logo' => [
+            // 表单标题
+            'title' => '站点Logo',
+
+            // 表单条目类型
+            'type' => 'text',
+
+            // 字数限制
+            'limit' => 50,
+        ],
+        'contact_name' => [
+            'title' => '联系人',
+            'type' => 'text',
+            'limit' => 50,
+        ],
+        'contact_email' => [
+            'title' => '联系人邮箱',
+            'type' => 'text',
+            'limit' => 50,
+        ],
+        'contact_home' => [
+            'title' => '个人主页',
+            'type' => 'text',
+            'limit' => 50,
         ],
     ],
 
