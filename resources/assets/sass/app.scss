@@ -31,6 +31,15 @@ body {
       }
     }
   }
+
+  .search-group .search-input {
+    background-image: url(/images/icon-search.png);
+    background-repeat: no-repeat;
+    background-position: 10px;
+    padding-left: 25px;
+    -webkit-transition: all 0.15s ease-in 0s;
+    transition: all 0.15s ease-in 0s;
+  }
 }
 
 /* Sticky footer styles */
@@ -113,7 +122,7 @@ body {
 }
 
 /* Topic Index Page */
-.topics-index-page, .categories-show-page, .root-page {
+.topics-index-page, .categories-show-page, .root-page, .search-page {
   .topic-list {
     .nav > li > a {
       position: relative;
@@ -209,4 +218,23 @@ body {
       font-size: 0.9em;
     }
   }
+}
+
+/* User register page */
+.search-page {
+  .search-results {
+    padding: 20px;
+    line-height: 25px;
+  }
+
+  .search-results .panel-heading h3 {
+    color: #696969;
+    font-size: 15px;
+    margin-bottom: 12px;
+  }
+
+  .search-results .highlight {
+    color: #00b5ad;
+  }
+
 }
