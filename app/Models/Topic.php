@@ -33,7 +33,9 @@ class Topic extends Model
             case 'recent':
                 $query->recent();
                 break;
-
+            case 'view':
+                $query->view();
+                break;
             default:
                 $query->recentReplied();
                 break;
@@ -55,8 +57,20 @@ class Topic extends Model
         return $query->orderBy('created_at', 'desc');
     }
 
+    public function scopeView($query)
+    {
+        // 按照创建时间排序
+        return $query->orderBy('view_count', 'desc');
+    }
+
     public function link($params = [])
     {
         return route('topics.show', array_merge([$this->id, $this->slug], $params));
+    }
+
+    public function updateView()
+    {
+        // 增加浏览量
+        return $this->increment('view_count', 1);
     }
 }

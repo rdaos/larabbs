@@ -1,3 +1,21 @@
+@if (count($notices))
+    <div class="panel panel-default">
+        <div class="panel-body active-users">
+
+            <div class="text-center">网站公告</div>
+            <hr>
+            @foreach ($notices as $notice)
+                <a class="media" href="{{ $notice->link() }}">
+                    <div class="media-body">
+                        <span class="media-heading">{{ $notice->title }}</span>
+                    </div>
+                </a>
+            @endforeach
+
+        </div>
+    </div>
+@endcan
+
 @can('manage_contents')
     <div class="panel panel-default">
         <div class="panel-body">

@@ -17,8 +17,9 @@
 
                 <div class="panel-heading">
                     <ul class="nav nav-pills">
-                        <li class="{{ active_class( ! if_query('order', 'recent') ) }}"><a href="{{ Request::url() }}?order=default">最后回复</a></li>
-                        <li class="{{ active_class(if_query('order', 'recent')) }}"><a href="{{ Request::url() }}?order=recent">最新发布</a></li>
+                        <li class="{{ active_class(if_query('order', 'default')) }}"><a href="{{ Request::url() }}?order=default">默认</a></li>
+                        <li class="{{ active_class(if_query('order', 'recent')) }}"><a href="{{ Request::url() }}?order=recent">最新</a></li>
+                        <li class="{{ active_class(if_query('order', 'view')) }}"><a href="{{ Request::url() }}?order=view">热门</a></li>
                     </ul>
                 </div>
 

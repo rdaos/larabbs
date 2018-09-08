@@ -12,12 +12,13 @@ class PagesController extends Controller
 {
     public function root(Request $request, Topic $topic, User $user, Link $link)
     {
-        $new_topics = $topic->withOrder('default')->paginate(5);
-        $hot_topics = $topic->withOrder('recent')->paginate(5);
+        $notices = $topic->query()->where('category_id', 4)->paginate(5);
+        $hots = $topic->withOrder('view')->paginate(5);
+        $news = $topic->paginate(10);
         $active_users = $user->getActiveUsers();
         $links = $link->getAllCached();
 
-        return view('pages.root', compact('new_topics', 'hot_topics', 'active_users', 'links'));
+        return view('pages.root', compact('notices', 'hots', 'news', 'active_users', 'links'));
     }
 
     public function search(Request $request, Topic $topic)

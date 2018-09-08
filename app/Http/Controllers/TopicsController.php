@@ -30,6 +30,7 @@ class TopicsController extends Controller
 
     public function show(Topic $topic)
     {
+        $topic->updateView();
         return view('topics.show', compact('topic'));
     }
 

@@ -34,9 +34,12 @@
 
                     <div class="article-meta text-center">
                         {{ $topic->created_at->diffForHumans() }}
-                        ⋅
-                        <span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
+                        <span class="ml5"> • </span>
+                        <span class="glyphicon glyphicon-comment ml5" aria-hidden="true"></span>
                         {{ $topic->reply_count }}
+                        <span class="ml5"> • </span>
+                        <span class="glyphicon glyphicon-eye-open ml5" aria-hidden="true"></span>
+                        {{ $topic->view_count }}
                     </div>
 
                     <div class="topic-body">
